@@ -52,7 +52,7 @@ exports.submitLocationData = async (req, res) => {
     };
 
     // Make a request to the ML model
-    const mlResponse = await axios.post('http://127.0.0.1:3000/predict', mlInput);
+    const mlResponse = await axios.post('https://gvmc-py.onrender.com/predict', mlInput);
 
     // Check if the response has the required data
     if (!mlResponse.data || !mlResponse.data.nextOverflowDate) {
