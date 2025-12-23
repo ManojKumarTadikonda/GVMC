@@ -1,0 +1,44 @@
+############################
+# Node.js (Backend)
+############################
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/build/
+backend/npm-debug.log*
+backend/yarn-error.log*
+
+############################
+# Python (venv)
+############################
+py/venv/
+py/.venv/
+py/__pycache__/
+py/*.pyc
+py/*.pyo
+py/*.pyd
+py/.pytest_cache/
+
+############################
+# Flutter (Frontend)
+############################
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/.pub-cache/
+frontend/pubspec.lock
+
+############################
+# OS / Editor
+############################
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+############################
+# Logs
+############################
+*.log
