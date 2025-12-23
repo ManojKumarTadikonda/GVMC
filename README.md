@@ -1,185 +1,196 @@
-GVMC – Smart Waste Management System
+# ♻️ GVMC – Smart Waste Management System
 
-GVMC is a full-stack smart waste management system that integrates a Node.js backend, Flutter frontend, and Python-based ML models to enable efficient waste monitoring, authentication, and intelligent decision-making.
+GVMC is a full-stack smart waste management platform designed to streamline waste monitoring and management using a **Flutter frontend**, **Node.js backend**, and **Python-based machine learning models**.
 
-📁 Project Structure
+---
+
+## 🛠 Tech Stack
+
+* **Backend:** Node.js, Express.js, MongoDB, JWT
+* **Frontend:** Flutter, Dart
+* **ML / Data Processing:** Python, TensorFlow / Keras
+* **Platforms:** Android, Windows, Linux, macOS
+
+---
+
+## 📁 Project Structure
+
+```text
 GVMC/
-├── Backend/        # Node.js + Express backend
-├── Frontend/       # Flutter application
-│   └── hackwave/
-├── py/             # Python ML & data processing
+├── Backend/            # Node.js + Express backend
+├── Frontend/
+│   └── hackwave/       # Flutter application
+├── py/                 # Python ML & data processing
 ├── .gitignore
 └── README.md
+```
 
-🛠️ Tech Stack
-Backend
+---
 
-Node.js
+## 🚀 Getting Started
 
-Express.js
+Follow the instructions below to set up and run the project locally.
 
-MongoDB
+### 1. Clone the Repository
 
-JWT Authentication
+```bash
+git clone https://github.com/ManojKumarTadikonda/GVMC.git
+cd GVMC
+```
 
-Frontend
+---
 
-Flutter
+## 🧪 Running Locally (Without Docker)
 
-Dart
+---
 
-Android / Windows / macOS / Linux support
+## 🔙 Backend Setup (Node.js + Express)
 
-Python
-
-Python 3.x
-
-TensorFlow / Keras (ML models)
-
-JSON-based input/output
-
-✅ Prerequisites
-
-Make sure you have the following installed:
-
-Node.js (v16+ recommended)
-
-npm
-
-Flutter SDK
-
-Python 3.8+
-
-MongoDB (local or cloud – MongoDB Atlas)
-
-Verify installations:
-
-node -v
-npm -v
-flutter --version
-python --version
-
-⚙️ Backend Setup (Node.js)
-1️⃣ Navigate to Backend
+### Step 1: Navigate to Backend folder
+```bash
 cd Backend
+```
 
-2️⃣ Install dependencies
+### Step 2: Install dependencies
+```bash
 npm install
+```
 
-3️⃣ Create environment file
+### Step 3: Configure Environment Variables
+Create a `.env` file inside the `Backend` folder:
 
-Create a .env file in Backend/:
-
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+```
 
-4️⃣ Run backend server
+> ⚠️ **Important:** Never commit `.env` files to GitHub.
+
+### Step 4: Start Backend Server
+```bash
 npm start
+```
 
-
-OR (for development):
-
+OR (development mode):
+```bash
 npm run dev
+```
 
+*Backend will run at:*  
+`http://localhost:5000`
 
-📍 Backend will run on:
+---
 
-http://localhost:5000
+## 🎨 Frontend Setup (Flutter)
 
-📱 Frontend Setup (Flutter)
-1️⃣ Navigate to Flutter app
+Open a **new terminal window** and follow the steps below.
+
+### Step 1: Navigate to Flutter app
+```bash
 cd Frontend/hackwave
+```
 
-2️⃣ Get Flutter packages
+### Step 2: Install Flutter dependencies
+```bash
 flutter pub get
+```
 
-3️⃣ Run the app
-
-For connected device / emulator:
-
+### Step 3: Run the application
+```bash
 flutter run
+```
 
-
-For specific platform:
-
-flutter run -d chrome
-flutter run -d windows
+Run on specific platforms:
+```bash
 flutter run -d android
+flutter run -d windows
+flutter run -d chrome
+```
 
-🧠 Python Module Setup (ML)
-1️⃣ Navigate to Python folder
+---
+
+## 🧠 Python Module Setup (ML & Data Processing)
+
+### Step 1: Navigate to Python folder
+```bash
 cd py
+```
 
-2️⃣ Create virtual environment (recommended)
+### Step 2: Create virtual environment (recommended)
+```bash
 python -m venv venv
+```
 
+Activate the environment:
 
-Activate it:
-
-Windows
-
+**Windows**
+```bash
 venv\Scripts\activate
+```
 
-
-Linux / macOS
-
+**Linux / macOS**
+```bash
 source venv/bin/activate
+```
 
-3️⃣ Install dependencies
+### Step 3: Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Run Python app / scripts
+### Step 4: Run Python application
+```bash
 python app.py
+```
 
+### 📌 ML Models Used
+* `waste_management_relu_model.h5`
+* `waste_management_relu_model_legacy.h5`
 
-📌 ML models used:
+---
 
-waste_management_relu_model.h5
+## 🔗 Application Flow
 
-waste_management_relu_model_legacy.h5
+* Flutter frontend communicates with the Node.js backend via REST APIs
+* Backend handles authentication, database operations, and business logic
+* Python module processes ML predictions and waste classification logic
 
-🔗 How Components Work Together
+---
 
-Flutter frontend communicates with Node.js backend via REST APIs
+## 🔐 Security Notes
 
-Backend handles authentication, database operations, and logic
+* `.env` files are ignored using `.gitignore`
+* Use `.env.example` to share environment variable structure
+* Never commit credentials or secrets
 
-Python ML module processes data and predictions (can be integrated via API or scripts)
+---
 
-🔐 Security Notes
+## ▶️ Running Order (Recommended)
 
-.env files are ignored and should never be committed
+1. Start **MongoDB**
+2. Run **Backend server**
+3. Run **Python ML module** (if required)
+4. Run **Flutter Frontend**
 
-Use .env.example for sharing environment variables structure
+---
 
-Do not commit secrets or credentials
+## 🤝 Contribution
 
-🚀 Running All Services Together (Order)
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
 
-Start MongoDB
+---
 
-Run Backend
+## 📄 License
 
-Run Python ML module (if required)
+This project is intended for educational and development purposes.
 
-Run Flutter Frontend
+---
 
-🤝 Contribution
+## 👤 Author
 
-Fork the repository
-
-Create a feature branch
-
-Commit your changes
-
-Open a Pull Request
-
-📄 License
-
-This project is for educational and development purposes.
-
-👤 Author
-
-Manoj Kumar Tadikonda
+**Manoj Kumar Tadikonda**  
 GitHub: https://github.com/ManojKumarTadikonda
