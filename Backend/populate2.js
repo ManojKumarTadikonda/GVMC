@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Location = require('./models/Location'); // Adjust the path to your schema file
-
+require('dotenv').config();
 const data = [
   { loc_name: "MVP Colony", popDensity: 3200, thresholdPercent: 95, eventWastePercent: 3, permanentSourcePercent: 7 },
   { loc_name: "Gajuwaka", popDensity: 4000, thresholdPercent: 92, eventWastePercent: 4, permanentSourcePercent: 6 },
@@ -37,11 +37,13 @@ const data = [
 ];
 
 async function populateLocations() {
+  console.log(process.env.MONGO_URI);
+  console.log('Connecting to database...');
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/GVMC', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+    await mongoose.connect(process.env.MONGO_URI, {
+
     });
+    console.log(process.env.MONGO_URI);
     console.log('Database connected successfully.');
 
     const formattedData = data.map((item, index) => ({

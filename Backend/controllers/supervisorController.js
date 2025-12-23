@@ -14,7 +14,7 @@ exports.protectSupervisor = (req, res, next) => {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 };
-
+// 
 // Controller function to handle location data submission
 exports.submitLocationData = async (req, res) => {
   try {
@@ -43,6 +43,7 @@ exports.submitLocationData = async (req, res) => {
     // Prepare data to send to ML model
     const mlInput = {
       "location_id": locIdNumber,
+      // "date":,
       "population_density": popDensity,
       "threshold_frequency_percent": thresholdPercent,
       "expected_event_waste_percent": eventWastePercent,

@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "location_id": "1",
+    "date": "2024-07-20",
+    "population_density": 1500,
+     "threshold_frequency_percent": 95,
+    "expected_event_waste_percent": 20,
+    "permanent_source_waste_percent": 40,
+    "waste_already_present_percent": 15
+  },
+  "outputs": {
+    "next_overflow_date": "2024-12-25"
+  }
+}

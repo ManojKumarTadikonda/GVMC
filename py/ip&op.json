@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "location_id": "1",
+    "population_density": 1500,
+    "threshold_frequency": 500,
+    "expected_event_waste": 50,
+    "permanent_source_waste": 200,
+    "waste_already_present": 300,
+    "season_flag": 1
+  },
+  "outputs": {
+    "next_overflow_date": "2024-12-25"
+  }
+}
